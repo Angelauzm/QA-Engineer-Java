@@ -25,7 +25,7 @@ public class Lesson_3 {
             }
         }
 
-        public  void eat(int foodAmount) {
+        public void eat(int foodAmount) {
             if (foodAmount >= 0) {
                 isHungry = false;
                 System.out.println("Еды хватило, животное наелось");
@@ -64,31 +64,31 @@ public class Lesson_3 {
     }
 
 
-        public static void main(String[] args) {
-            Bowl bowl = new Bowl();
-            bowl.addFood(20);
+    public static void main(String[] args) {
+        Bowl bowl = new Bowl();
+        bowl.addFood(20);
 
-            Cat cat1 = new Cat("Масяня");
-            Cat cat2 = new Cat("Царапка");
-            Dog dog = new Dog("Шарик");
+        Cat cat1 = new Cat("Масяня");
+        Cat cat2 = new Cat("Царапка");
+        Dog dog = new Dog("Шарик");
 
-            System.out.println("Первое животное: " + cat1.name);
-            cat1.run(160);
-            cat1.swim(150);
+        System.out.println("Первое животное: " + cat1.name);
+        cat1.run(160);
+        cat1.swim(150);
 
-            System.out.println("Второе животное: " + cat2.name);
-            cat2.run(300);
-            cat2.swim(0);
+        System.out.println("Второе животное: " + cat2.name);
+        cat2.run(300);
+        cat2.swim(0);
 
-            System.out.println("Третье животное: " + dog.name);
-            dog.run(30);
-            dog.swim(356);
+        System.out.println("Третье животное: " + dog.name);
+        dog.run(30);
+        dog.swim(356);
 
-            Animal[] animals = {cat1, cat2, dog};
+        Animal[] animals = {cat1, cat2, dog};
 
-            for (Animal animal : animals) {
-                animal.eat(bowl.getFoodAmount());
-                System.out.println("Животное с именем " + animal.name +  " голодно: " + animal.isHungry);
+        for (Animal animal : animals) {
+            animal.eat(bowl.getFoodAmount());
+            System.out.println("Животное с именем " + animal.name + " голодно: " + animal.isHungry);
         }
     }
 }
